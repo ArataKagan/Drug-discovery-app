@@ -1,15 +1,44 @@
-import { useTable, useSortBy } from 'react-table';
+import React from 'react';
+import { useTable, useSortBy, useFilters } from 'react-table';
 
+function TextFilter({
+    column: {filterValue, preFilteredRows, setFilter},
+}){
+    const count = preFilteredRows.length
+    return (
+        <input 
+            value={filterValue || ''}
+            onChange= {e => {
+                setFilter(e.target.value || undefined)
+            }}
+            placeholder={`Search ${count} records...`}
+        />
+    )
+}
 
 
 function Table({columns, data}) {
+    const defaultColumn = React.useMemo(
+        () => ({
+            Filter: TextFilter,
+        }),
+        []
+    )
+    
     const {
         getTableProps,
         getTableBodyProps,
         headerGroups,
         rows,
         prepareRow
-    } = useTable({columns, data}, useSortBy);
+    } = useTable(
+            {columns, 
+             data,
+             defaultColumn,
+            }, 
+        useFilters,
+        useSortBy
+        );
 
     return (
         <table {...getTableProps()}>
@@ -19,6 +48,7 @@ function Table({columns, data}) {
                         {headerGroup.headers.map(column => (
                             <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                                 {column.render('Header')}
+                                <div>{column.canFilter ? column.render('Filter') : null}</div>
                                 <span>
                                     {column.isSorted ? (column.isSortedDesc ? ' 🔽' : ' 🔼') : ''}
                                 </span>
