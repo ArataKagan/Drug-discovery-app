@@ -43,7 +43,7 @@ function Table({columns, data}) {
             {columns, 
              data,
              defaultColumn,
-             initialState: {pageSize: 4}
+             initialState: {pageSize: 8}
             }, 
         useFilters,
         useSortBy,
