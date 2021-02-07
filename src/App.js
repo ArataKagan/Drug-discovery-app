@@ -2,9 +2,27 @@ import React, {useState, useEffect} from 'react';
 import {Styles} from './Style.js';
 import './App.css';
 import Table from './components/Table';
+import axios from 'axios';
 
 
 function App() {
+  const [drug, setDrug] = useState('');
+  const url = 'https://api.fda.gov/drug/drugsfda.json?limit=5';
+
+  useEffect(() => {
+    getAllData();
+  }, []);
+
+  const getAllData = () => {
+    axios.get(url)
+    .then((response) => {
+      const allData = response.data.results;
+      setDrug(allData);
+      console.log(drug);
+    })
+    .catch(error => console.error(`Error: ${error}`));
+  }
+
   const data = React.useMemo(() =>
   [
     {
@@ -45,7 +63,9 @@ function App() {
     },
  ],
  []
-);
+); 
+
+
 
 const columns = React.useMemo(
   () => [
