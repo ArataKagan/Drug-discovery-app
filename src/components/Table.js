@@ -1,5 +1,12 @@
 import React from 'react';
 import { useTable, useSortBy, useFilters, usePagination } from 'react-table';
+import MaUTable from '@material-ui/core/Table'
+import TableBody from '@material-ui/core/TableBody'
+import TableCell from '@material-ui/core/TableCell'
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead'
+import TableRow from '@material-ui/core/TableRow'
+import Paper from '@material-ui/core/Paper';
 
 function TextFilter({
     column: {filterValue, preFilteredRows, setFilter},
@@ -51,24 +58,25 @@ function Table({columns, data}) {
         );
 
     return (
+        <TableContainer component={Paper} style={{width: '95%' }}>
         <div>
-            <table {...getTableProps()}>
-                <thead>
+            <MaUTable {...getTableProps()}>
+                <TableHead style={{backgroundColor: '#bbbbbb' }}>
                     {headerGroups.map(headerGroup => (
-                        <tr {...headerGroup.getHeaderGroupProps()}>
+                        <TableRow {...headerGroup.getHeaderGroupProps()}>
                             {headerGroup.headers.map(column => (
-                                <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                                <TableCell {...column.getHeaderProps(column.getSortByToggleProps())}>
                                     {column.render('Header')}
                                     <div>{column.canFilter ? column.render('Filter') : null}</div>
                                     <span>
                                         {column.isSorted ? (column.isSortedDesc ? ' 🔽' : ' 🔼') : ''}
                                     </span>
-                                </th>
+                                </TableCell>
                             ))}
-                        </tr>
+                        </TableRow>
                     ))}
-                </thead>
-                <tbody {...getTableBodyProps()}>
+                </TableHead>
+                <TableBody  {...getTableBodyProps()}>
                     {page.map((row, i) => {
                         prepareRow(row)
                         return (
@@ -79,8 +87,8 @@ function Table({columns, data}) {
                             </tr>
                         )
                     })}
-                </tbody>
-            </table>
+                </TableBody>
+            </MaUTable>
             <div>
                 <button onClick={() => previousPage()} disabled={!canPreviousPage}>
                     Previous Page
@@ -96,6 +104,7 @@ function Table({columns, data}) {
                 </div>
             </div>
         </div>
+        </TableContainer>
     )    
 }
 

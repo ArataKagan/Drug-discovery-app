@@ -2,12 +2,13 @@ import React, {useState, useEffect} from 'react';
 import {Styles} from './Style.js';
 import './App.css';
 import Table from './components/Table';
+import CssBaseline from '@material-ui/core/CssBaseline'
 import axios from 'axios';
 
 
 function App() {
   const [drug, setDrug] = useState([]);
-  const url = 'https://api.fda.gov/drug/drugsfda.json?limit=15';
+  const url = 'https://api.fda.gov/drug/drugsfda.json?limit=50';
 
   useEffect(() => {
     getAllData();
@@ -28,7 +29,7 @@ function App() {
 const columns = React.useMemo(
   () => [
      {
-        Header: 'FDA Info',
+        Header: 'OpenFDA Info',
         columns: [
           {
             Header: 'Brand',
@@ -54,13 +55,16 @@ const columns = React.useMemo(
 
  
   return (
-    <div className="App">
-      <header className="App-header">
-         <p>Drug discovery app</p>
-         <Styles>
+    <div>
+     {/* <div className="App"> */}
+       <header className="App-header"> 
+         <h1>Medicine discovery app</h1>
+          <Styles> 
+          <CssBaseline />
           <Table columns={columns} data={drug} />
-         </Styles>
-      </header>
+          </Styles> 
+       </header> 
+     {/* </div> */}
     </div>
   );
 }

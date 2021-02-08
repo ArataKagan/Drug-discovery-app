@@ -5,7 +5,7 @@ export const Styles = styled.div`
 
   table {
     border-spacing: 0;
-    border: 1px solid black;
+    
 
     tr {
       :last-child {
@@ -19,8 +19,7 @@ export const Styles = styled.div`
     td {
       margin: 0;
       padding: 0.5rem;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
+      border-bottom: 1px solid #ececec;
 
       :last-child {
         border-right: 0;
