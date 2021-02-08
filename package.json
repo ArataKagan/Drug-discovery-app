@@ -11,6 +11,7 @@
     "mdbreact": "^5.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-google-login": "^5.2.2",
     "react-scripts": "4.0.2",
     "react-table": "^7.6.3",
     "styled-components": "^5.2.1",

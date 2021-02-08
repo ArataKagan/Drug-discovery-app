@@ -58,7 +58,7 @@ const columns = React.useMemo(
     <div>
      {/* <div className="App"> */}
        <header className="App-header"> 
-         <h1>Medicine discovery app</h1>
+         <h1>Medicine Discovery App</h1>
           <Styles> 
           <CssBaseline />
           <Table columns={columns} data={drug} />
