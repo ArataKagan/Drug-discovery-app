@@ -3,9 +3,10 @@ import { GoogleLogout } from 'react-google-login';
 
 const clientId = '868018496849-qs2192fi3avad23mgaicmqup4asltpil.apps.googleusercontent.com'
 
-function Logout(){
+function Logout({updateLogin}){
     const onSuccess = () => {
        alert('Logout made successfully');
+       updateLogin(false);
     };
 
     return (

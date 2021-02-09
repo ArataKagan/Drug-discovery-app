@@ -27,7 +27,7 @@ function Main(){
 const columns = React.useMemo(
   () => [
      {
-        Header: 'OpenFDA Info',
+        Header: 'Powered By OPEN.FDA.GOV',
         columns: [
           {
             Header: 'Brand',

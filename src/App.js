@@ -1,14 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import Login from './components/Login';
-import Logout from './components/Logout';
+import GoogleLogin from './components/GoogleLogin';
 import Main from './Main';
 
 
 function App() { 
   return (
     <div>
-      <Login />
-      <Logout />
+      <GoogleLogin />
       <Main />
     </div>
   );

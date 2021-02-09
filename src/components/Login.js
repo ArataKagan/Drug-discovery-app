@@ -1,11 +1,12 @@
 import React from 'react';
-import { GoogleLogin } from 'react-google-login';
+import { GoogleLogin} from 'react-google-login';
 
 const clientId = '868018496849-qs2192fi3avad23mgaicmqup4asltpil.apps.googleusercontent.com'
 
-function Login(){
+function Login({updateLogin}){
     const onSuccess = (res) => {
         console.log('[Login Success] currentUser: ', res.profileObj);
+        updateLogin(true);
     };
 
     const onFailure = (res) => {

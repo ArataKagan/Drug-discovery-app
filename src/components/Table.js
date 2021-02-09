@@ -7,13 +7,14 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Paper from '@material-ui/core/Paper';
+import { Icon, Input } from 'semantic-ui-react'
 
 function TextFilter({
     column: {filterValue, preFilteredRows, setFilter},
 }){
     const count = preFilteredRows.length
     return (
-        <input 
+        <Input 
             value={filterValue || ''}
             onChange= {e => {
                 setFilter(e.target.value || undefined)
@@ -60,8 +61,8 @@ function Table({columns, data}) {
     return (
         <TableContainer component={Paper} style={{width: '95%' }}>
         <div>
-            <MaUTable {...getTableProps()}>
-                <TableHead style={{backgroundColor: '#bbbbbb' }}>
+            <MaUTable {...getTableProps()} style={{marginBottom: '21px' }}>
+                <TableHead style={{backgroundColor: '#6495ED'}}>
                     {headerGroups.map(headerGroup => (
                         <TableRow {...headerGroup.getHeaderGroupProps()}>
                             {headerGroup.headers.map(column => (
@@ -69,7 +70,7 @@ function Table({columns, data}) {
                                     {column.render('Header')}
                                     <div>{column.canFilter ? column.render('Filter') : null}</div>
                                     <span>
-                                        {column.isSorted ? (column.isSortedDesc ? ' 🔽' : ' 🔼') : ''}
+                                        {column.isSorted ? (column.isSortedDesc ? <Icon name="angle double down"/> : <Icon name="angle double up"/>) : ''}
                                     </span>
                                 </TableCell>
                             ))}
@@ -89,19 +90,21 @@ function Table({columns, data}) {
                     })}
                 </TableBody>
             </MaUTable>
-            <div>
-                <button onClick={() => previousPage()} disabled={!canPreviousPage}>
-                    Previous Page
-                </button>
-                <button onClick={() => nextPage()} disabled={!canNextPage}>
-                    Next Page
-                </button>
-                <div>
-                    Page{' '}
-                    <em>
-                        {pageIndex + 1} of {pageOptions.length}
-                    </em>
-                </div>
+               <div>
+                    <div className="PageNav">
+                        <button onClick={() => previousPage()} disabled={!canPreviousPage}>
+                            <Icon name="angle left"/>
+                        </button>
+                        <button onClick={() => nextPage()} disabled={!canNextPage}>
+                        <Icon name="angle right"/>
+                        </button>
+                    </div>
+                    <div className="PageCount">
+                        Page{' '}
+                        <em>
+                            {pageIndex + 1} of {pageOptions.length}
+                        </em>
+                    </div>
             </div>
         </div>
         </TableContainer>
