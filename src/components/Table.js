@@ -66,7 +66,7 @@ function Table({columns, data}) {
                     {headerGroups.map(headerGroup => (
                         <TableRow {...headerGroup.getHeaderGroupProps()}>
                             {headerGroup.headers.map(column => (
-                                <TableCell {...column.getHeaderProps(column.getSortByToggleProps())} style={{color: 'white', fontFamily: 'Helvetica', fontWeight: 'bold'}}>
+                                <TableCell {...column.getHeaderProps(column.getSortByToggleProps())} style={{color: 'white', fontSize: "15px", fontFamily: 'Helvetica', fontWeight: 'bold'}}>
                                     {column.render('Header')}
                                     <div>{column.canFilter ? column.render('Filter') : null}</div>
                                     <span>

@@ -8,7 +8,7 @@ import axios from 'axios';
 
 function Main(){
     const [drug, setDrug] = useState([]);
-  const url = 'https://api.fda.gov/drug/drugsfda.json?limit=50';
+  const url = 'https://api.fda.gov/drug/drugsfda.json?limit=100';
 
   useEffect(() => {
     getAllData();
