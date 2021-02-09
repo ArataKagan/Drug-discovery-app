@@ -62,11 +62,11 @@ function Table({columns, data}) {
         <TableContainer component={Paper} style={{width: '95%' }}>
         <div>
             <MaUTable {...getTableProps()} style={{marginBottom: '21px' }}>
-                <TableHead style={{backgroundColor: '#6495ED'}}>
+                <TableHead style={{background: "linear-gradient(90deg, #4ca1af 28%, #c4e0e5 104%"}}>
                     {headerGroups.map(headerGroup => (
                         <TableRow {...headerGroup.getHeaderGroupProps()}>
                             {headerGroup.headers.map(column => (
-                                <TableCell {...column.getHeaderProps(column.getSortByToggleProps())}>
+                                <TableCell {...column.getHeaderProps(column.getSortByToggleProps())} style={{color: 'white', fontFamily: 'Helvetica', fontWeight: 'bold'}}>
                                     {column.render('Header')}
                                     <div>{column.canFilter ? column.render('Filter') : null}</div>
                                     <span>

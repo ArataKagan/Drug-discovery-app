@@ -10,7 +10,9 @@ function GoogleLogin(){
     }
     
     return(
-        login ? <Logout updateLogin={updateLogin} /> : <Login updateLogin={updateLogin} />
+        <div className="Google-login">
+            {login ? <Logout updateLogin={updateLogin} /> : <Login updateLogin={updateLogin} />}
+        </div>
     )
 }
 

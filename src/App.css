@@ -10,7 +10,11 @@
   font-size: 15px;
 } 
 
-
+.Google-login {
+  padding-top: 13px;
+   padding-left: 14px;
+   background-color: #f6f6f6;
+}
 
 h1 {
   font-family: 'Helvetica', 'Arial', sans-serif;
@@ -35,3 +39,6 @@ h1 {
   align-items: center;
 }
 
+.MuiTableCell-root {
+  color: white;
+}
