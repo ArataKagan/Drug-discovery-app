@@ -61,7 +61,7 @@ function Table({columns, data}) {
     return (
         <TableContainer component={Paper} style={{width: '95%' }}>
         <div>
-            <MaUTable {...getTableProps()} style={{marginBottom: '21px' }}>
+            <MaUTable {...getTableProps()} style={{marginBottom: '21px'}}>
                 <TableHead style={{background: "linear-gradient(90deg, #4ca1af 28%, #c4e0e5 104%"}}>
                     {headerGroups.map(headerGroup => (
                         <TableRow {...headerGroup.getHeaderGroupProps()}>
@@ -83,7 +83,7 @@ function Table({columns, data}) {
                         return (
                             <tr {...row.getRowProps()}>
                                 {row.cells.map(cell => {
-                                    return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                                    return <td {...cell.getCellProps()} style={{wordWrap:"break-word"}}>{cell.render('Cell')}</td>
                                 })}
                             </tr>
                         )
