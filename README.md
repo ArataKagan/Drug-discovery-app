@@ -4,10 +4,8 @@
 
 This is a medicine discovery app built with React to fetch medicine information from OpenFDA API's Drug API Endpoint. <br />
 
-The app utilizes axios library to make HTTP requests to the API endpoint and retrieves medicine brand name, marketing status, dosage form and route. The retrieved data is displayed on React Table which is a UI library made for displaying in tabular data format. <br />
-Please check out the live site [here](https://drug-checker-app.herokuapp.com/). 
-
-**I'm hosting the live site on Heroku's free plan. It takes about 10 seconds to open the site. If the application error pops up, please refresh the browser.**
+The app utilizes axios library to make HTTP requests to the API endpoint and retrieves medicine brand name, marketing status, dosage form and route. The retrieved data is displayed on React Table which is a table display UI library. <br />
+Please check out the live site [here](https://drug-checker-app.herokuapp.com/). **(I'm hosting the live site on Heroku's free plan. It takes about 10 seconds to open the site. If the application error pops up, please refresh the browser.)**
 
 ## Built With
 
