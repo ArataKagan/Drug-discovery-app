@@ -43,7 +43,7 @@ Please check out the live site from [here](https://drug-checker-app.herokuapp.co
 
 - Sort the list
 
-![alt text](https://github.com/ArataKagan/Drug-discovery-app/blob/main/Screen%20Recording%202021-02-09%20at%207.20.36%20PM.gif) 
+![alt text](https://github.com/ArataKagan/Drug-discovery-app/blob/main/Screen%20Recording%202021-02-09%20at%207.20.36%20PM.gif | width=200) 
 
 - Search item 
 
