@@ -29,7 +29,7 @@ Design Components:
   npm install npm@latest -g
   ```
 * Node 
-  - Please install the latest Node from this [link](https://nodejs.org/en/) 
+  - Please install the latest Node library from this [link](https://nodejs.org/en/) 
 
 ### Installation 
 
@@ -46,7 +46,7 @@ Design Components:
    npm start
    ```
 <!-- FEATURES -->
-### Features 
+## Features 
 
 - Sort the list
 <img src="https://github.com/ArataKagan/Drug-discovery-app/blob/main/Screen%20Recording%202021-02-09%20at%207.20.36%20PM.gif" width="400">
@@ -54,6 +54,6 @@ Design Components:
 - Search item 
 <img src="https://github.com/ArataKagan/Drug-discovery-app/blob/main/Screen%20Shot%202021-02-09%20at%207.26.19%20PM.png" width="400">
 
-- Login with your Google Account 
+- Log in with your Google Account 
 
  
