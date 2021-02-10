@@ -2,11 +2,11 @@
 
 ![alt text](https://github.com/ArataKagan/Drug-discovery-app/blob/main/Screen%20Shot%202021-02-09%20at%202.43.29%20PM.png) 
 
-This is a medicine discovery app built with React Table, Table UI library, to fetch medicine information from OpenFDA API. <br/>
-Please check out the live site from [here](https://drug-checker-app.herokuapp.com/) (It takes about 5-10 seconds to open the site due to its hosting on Heroku Free plan.)
+This is a medicine discovery app built with React to fetch medicine information from OpenFDA API. <br/>
+Please check out the live site from [here](https://drug-checker-app.herokuapp.com/). 
 
 ## Built With
-- React
+- React v17.0.1
   - [React-Table](https://react-table.tanstack.com/) : Table UI library for React Hook 
   - [Axios](https://www.npmjs.com/package/axios) : Library to make HTTP request from the browser 
   - [React Google Login](https://www.npmjs.com/package/react-google-login) : Library to allow Google Login 
@@ -22,7 +22,7 @@ Please check out the live site from [here](https://drug-checker-app.herokuapp.co
   npm install npm@latest -g
   ```
 * Node 
-  - Please install from this [link](https://nodejs.org/en/) 
+  - Please install latest Node from this [link](https://nodejs.org/en/) 
   
 ### Installation 
 
