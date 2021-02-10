@@ -2,8 +2,8 @@
 
 ![alt text](https://github.com/ArataKagan/Drug-discovery-app/blob/main/Screen%20Shot%202021-02-09%20at%202.43.29%20PM.png) 
 
-This is a medicine discovery app built with React Table, Table UI library, to fetch medicine information from OpenFDA API. 
-[Live Site](https://drug-checker-app.herokuapp.com/) is here. (It takes about 5-10 seconds since hosting the app on Heroku Free plan.)
+This is a medicine discovery app built with React Table, Table UI library, to fetch medicine information from OpenFDA API. <br/>
+Please check [Live Site](https://drug-checker-app.herokuapp.com/) (It takes about 5-10 seconds since hosting the app on Heroku Free plan.)
 
 ## Built With
 - React
@@ -27,7 +27,7 @@ This is an example of how to list things you need to use the software and how to
   npm install npm@latest -g
   ```
 * node 
-  Please install from this [link](https://nodejs.org/en/) 
+  - Please install from this [link](https://nodejs.org/en/) 
   
 ### Installation 
 
