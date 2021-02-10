@@ -24,10 +24,6 @@ Design Components:
 ## Getting Started
 
 ### Prerequisites
-* NPM
-  ```sh
-  npm install npm@latest -g
-  ```
 * Node 
   - Please install the latest Node library from this [link](https://nodejs.org/en/) 
 
