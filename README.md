@@ -42,10 +42,10 @@ Please check out the live site from [here](https://drug-checker-app.herokuapp.co
 ### Features 
 
 - Sort the list
-<img src="https://github.com/ArataKagan/Drug-discovery-app/blob/main/Screen%20Recording%202021-02-09%20at%207.20.36%20PM.gif" width="200">
+<img src="https://github.com/ArataKagan/Drug-discovery-app/blob/main/Screen%20Recording%202021-02-09%20at%207.20.36%20PM.gif" width="400">
 
 - Search item 
-<img src="https://github.com/ArataKagan/Drug-discovery-app/blob/main/Screen%20Shot%202021-02-09%20at%207.26.19%20PM.png" width="200">
+<img src="https://github.com/ArataKagan/Drug-discovery-app/blob/main/Screen%20Shot%202021-02-09%20at%207.26.19%20PM.png" width="400">
 
 - Login with your Google Account 
 
